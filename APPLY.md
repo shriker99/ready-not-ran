@@ -1,6 +1,6 @@
-# Fix and Undo
+# Really Ran — fix and undo
 
-The checker only looks. Nothing changes until you press **Fix the ones I picked** and say yes.
+The checker only looks. Nothing changes until you double-click **Fix the easy ones** and type YES.
 
 ## What a fix may change
 

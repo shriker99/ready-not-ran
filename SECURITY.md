@@ -1,19 +1,16 @@
 # Security
 
-`ReadyNotRan.ps1` is read-only.
+Really Ran stays on this computer.
 
-It does:
-
-- List scheduled tasks Windows already lets this account see
-- Write an HTML file and a CSV file into a local `out` folder
+The checker only looks. The optional fixer only changes “when may this job run” switches after you type YES. A spare copy is saved first.
 
 It does not:
 
-- Change, disable, or create tasks
 - Send data anywhere
 - Read your documents, mail, or passwords
-- Install software
+- Change the backup program itself
+- Type a password
 
-You can open the `.ps1` file in Notepad and read every line before you run it.
+You can open the `.ps1` files in Notepad and read every line before you run them.
 
-If Windows SmartScreen warns you, that is normal for a script downloaded from the internet. Unblock the file or run it from PowerShell as shown in the README.
+If Windows warns you, that is normal for a download. Click **More info**, then **Run anyway**.

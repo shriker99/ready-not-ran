@@ -1,4 +1,5 @@
-# Ready ≠ Ran installer — current user only. No admin. No network.
+# Really Ran installer — current user only. No admin. No network.
+# Disk folder stays ReadyNotRan so spare copies and Undo still find them.
 
 $ErrorActionPreference = 'Stop'
 
@@ -21,7 +22,8 @@ $copy = @(
     'WHEN-IT-FAILS.md',
     'START-HERE.md',
     'LICENSE',
-    'README.md'
+    'README.md',
+    'NAME.md'
 )
 
 New-Item -ItemType Directory -Force -Path $dest | Out-Null
@@ -42,7 +44,7 @@ $fixCmd = Join-Path $dest 'Run-Fix.cmd'
 $undoCmd = Join-Path $dest 'Run-Undo.cmd'
 $ps1 = Join-Path $dest 'ReadyNotRan.ps1'
 if (-not (Test-Path -LiteralPath $ps1)) {
-    Write-Host 'ReadyNotRan.ps1 was not in this folder. Unzip the whole download and run Install again.'
+    Write-Host 'The program file was not in this folder. Unzip the whole download and run Install again.'
     exit 1
 }
 
@@ -59,19 +61,20 @@ function New-RnrShortcut {
     $s.Save()
 }
 
-$startDir = Join-Path $env:APPDATA 'Microsoft\Windows\Start Menu\Programs\Ready Not Ran'
+$startDir = Join-Path $env:APPDATA 'Microsoft\Windows\Start Menu\Programs\Really Ran'
 $desk = [Environment]::GetFolderPath('Desktop')
-New-RnrShortcut -LinkPath (Join-Path $startDir 'Ready Not Ran.lnk') -TargetCmd $scanCmd -Description 'Check night jobs on this PC'
-New-RnrShortcut -LinkPath (Join-Path $desk 'Ready Not Ran.lnk') -TargetCmd $scanCmd -Description 'Check night jobs on this PC'
+New-RnrShortcut -LinkPath (Join-Path $startDir 'Really Ran.lnk') -TargetCmd $scanCmd -Description 'Really Ran — did last night finish?'
+New-RnrShortcut -LinkPath (Join-Path $desk 'Really Ran.lnk') -TargetCmd $scanCmd -Description 'Really Ran — did last night finish?'
 if (Test-Path -LiteralPath $fixCmd) {
-    New-RnrShortcut -LinkPath (Join-Path $startDir 'Fix the easy ones.lnk') -TargetCmd $fixCmd -Description 'Apply safe night-job settings'
-    New-RnrShortcut -LinkPath (Join-Path $desk 'Fix the easy ones.lnk') -TargetCmd $fixCmd -Description 'Apply safe night-job settings'
+    New-RnrShortcut -LinkPath (Join-Path $startDir 'Fix the easy ones.lnk') -TargetCmd $fixCmd -Description 'Really Ran — apply safe settings'
+    New-RnrShortcut -LinkPath (Join-Path $desk 'Fix the easy ones.lnk') -TargetCmd $fixCmd -Description 'Really Ran — apply safe settings'
 }
 if (Test-Path -LiteralPath $undoCmd) {
-    New-RnrShortcut -LinkPath (Join-Path $startDir 'Put the old settings back.lnk') -TargetCmd $undoCmd -Description 'Undo the last Ready Not Ran fix'
+    New-RnrShortcut -LinkPath (Join-Path $startDir 'Put the old settings back.lnk') -TargetCmd $undoCmd -Description 'Really Ran — undo the last fix'
+    New-RnrShortcut -LinkPath (Join-Path $desk 'Put the old settings back.lnk') -TargetCmd $undoCmd -Description 'Really Ran — undo the last fix'
 }
 
-Write-Host 'Installed for this Windows user only.'
+Write-Host 'Installed Really Ran for this Windows user only.'
 Write-Host "Folder: $dest"
-Write-Host 'Desktop: Ready Not Ran  and  Fix the easy ones'
+Write-Host 'Desktop: Really Ran  and  Fix the easy ones'
 Write-Host 'Nothing was sent off this PC.'
