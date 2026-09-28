@@ -3,9 +3,11 @@
 Windows will put a green check next to a night job and say it is **Ready**.
 That check often only means “I started the program.” It does not mean the backup, export, or report actually finished.
 
-This is a small free checker. It reads your scheduled jobs and writes a report you can open in a browser.
+This checker looks for **24 real traps** most owners never hear about. It writes a report you can open in a browser.
 
 It does **not** change any jobs. It only looks.
+
+The list of traps is in [PROBLEMS.md](PROBLEMS.md).
 
 ## Get the files
 
@@ -42,7 +44,7 @@ Run it as Administrator if you want to see jobs created by other accounts, not j
 | Never ran | It is on the list but has not run yet. |
 | Failed | Windows started something. The work itself failed or was refused. |
 | Missed | The clock time passed and the job did not catch up. |
-| May skip | The job looks healthy, but a laptop setting can quietly skip it (sleep, battery, “only when idle”). |
+| May skip | The job looks healthy, but a setting can quietly skip it. |
 | Looks OK | No obvious trap. Still confirm the file you expected actually showed up. |
 
 A result of **0** only means the program said “I exited cleanly.” Your script can still have written nothing.
@@ -50,7 +52,7 @@ A result of **0** only means the program said “I exited cleanly.” Your scrip
 ## What this is not
 
 - Not a monitoring service.
-- Not a fix button. See [FIXES.md](FIXES.md) for the usual traps.
+- Not a fix button. See [FIXES.md](FIXES.md).
 - Not connected to the internet. The script stays on your PC.
 
 ## License

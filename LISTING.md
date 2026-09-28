@@ -1,45 +1,52 @@
 # Gumroad paste
 
-Use this on the product page. Do not invent a checkout link until Gumroad gives you one.
-
 ## Product name
 
-Ready ≠ Ran — Windows night-job checker
+Ready ≠ Ran — 24 silent Windows job failures
 
 ## Price
 
-$29 USD
+$49 USD
 
 Turn on “Pay what you want” if Gumroad offers it. Floor $29.
 
 ## Short summary
 
-Windows says the night job is Ready. That often only means it started. This checker tells you which jobs only look finished.
+Windows says the night job is Ready. That often only means it started. This checker hunts 24 traps most owners never hear about.
 
 ## Description (paste)
 
 Your PC has a night to-do list. Backups. Reports. File exports. Windows puts a green check next to those jobs.
 
-That check often only means “I started the program.” It does not mean the work finished. A laptop can be asleep. A setting can skip the job on battery. A script can fail and still leave a clean-looking result.
+That check often only means “I started the program.” It does not mean the work finished.
 
-Ready ≠ Ran is a small Windows checker. You unzip it, run one script, and get a report you can open in a browser. Red and yellow rows first.
+Ready ≠ Ran looks for 24 real traps, including:
+
+- History off, so there is no trail
+- Laptop defaults that refuse the job on battery
+- Sleep and connected-standby that swallow the alarm
+- Wake timers off in Windows power settings
+- Saved passwords that went stale after a password change
+- Jobs that only run while someone is logged in
+- Blank Start-in folders that write into System32
+- Mapped drives that do not exist at night
+- PowerShell started in a way that always looks successful
+- Missed nights that never catch up
+- Triggers that expired while the job still says Ready
+
+You unzip it, run one script, and get a report. Red and yellow first. Every check is listed, even the ones this PC passed.
 
 It does not change any jobs. It only looks.
 
-Included:
-- ReadyNotRan.ps1 — the checker
-- FIXES.md — the usual traps in plain English
-- A short report you can hand to whoever owns the PC
-
-The same checker is also free on GitHub. Pay here if you want the pack in one download and to fund the next version (a simple email alert).
+The same checker is also free on GitHub. Pay here for the packed download and to fund the next version (a simple email alert).
 
 Needs Windows 10 or 11. Not a phone app. No support inbox — the guide is in the zip.
 
 ## After they pay
 
-Gumroad emails the zip. That is the whole delivery.
+Gumroad emails the zip.
 
 ## Cover / thumbnail text
 
 Ready ≠ Ran
-The green check can lie.
+24 ways the green check lies.
