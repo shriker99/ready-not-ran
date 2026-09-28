@@ -1,52 +1,32 @@
-# Gumroad paste
+# Store listing
 
 ## Product name
 
-Ready ≠ Ran — 24 silent Windows job failures
+Really Ran — Windows said Ready. Did it really run?
 
 ## Price
 
-$49 USD
-
-Turn on “Pay what you want” if Gumroad offers it. Floor $29.
+$29 USD
 
 ## Short summary
 
-Windows says the night job is Ready. That often only means it started. This checker hunts 24 traps most owners never hear about.
+Windows can put a green check next to a night backup and still have done no work. Really Ran reads those jobs in plain English and can flip the easy switches for you.
 
-## Description (paste)
+## Description
 
-Your PC has a night to-do list. Backups. Reports. File exports. Windows puts a green check next to those jobs.
+Your computer can work at night. Backups. Reports. File copies.
 
-That check often only means “I started the program.” It does not mean the work finished.
+Windows puts a green check next to that work. That check often only means “I started.” The computer may have been asleep, on battery, or waiting until nobody used the mouse.
 
-Ready ≠ Ran looks for 24 real traps, including:
+Really Ran looks at the night jobs on this computer and writes a report. Red and yellow first.
 
-- History off, so there is no trail
-- Laptop defaults that refuse the job on battery
-- Sleep and connected-standby that swallow the alarm
-- Wake timers off in Windows power settings
-- Saved passwords that went stale after a password change
-- Jobs that only run while someone is logged in
-- Blank Start-in folders that write into System32
-- Mapped drives that do not exist at night
-- PowerShell started in a way that always looks successful
-- Missed nights that never catch up
-- Triggers that expired while the job still says Ready
+If you want, double-click **Fix the easy ones**. Type YES. It turns on wake, battery, catch-up, and retry. A spare copy is saved first so you can undo.
 
-You unzip it, run one script, and get a report. Red and yellow first. Every check is listed, even the ones this PC passed.
+It will not type a password, guess a missing folder, or rewrite the backup program.
 
-It does not change any jobs. It only looks.
+Needs Windows 10 or 11. Not a phone app.
 
-The same checker is also free on GitHub. Pay here for the packed download and to fund the next version (a simple email alert).
+## Cover text
 
-Needs Windows 10 or 11. Not a phone app. No support inbox — the guide is in the zip.
-
-## After they pay
-
-Gumroad emails the zip.
-
-## Cover / thumbnail text
-
-Ready ≠ Ran
-24 ways the green check lies.
+Really Ran
+Windows said Ready. Did it really run?

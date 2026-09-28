@@ -1,47 +1,35 @@
-# Ready ≠ Ran
+# Really Ran
 
-Windows will put a green check next to a night job and say it is **Ready**.
-That often only means “I started.” It does not mean the backup, export, or report actually finished.
+Windows said Ready. Did it really run?
 
-This tool looks for the usual quiet reasons that happens. Then it writes a page you can open in any browser.
+Your computer can do work at night: backups, reports, file copies. Windows puts a green check next to that work. That check often only means “I started.”
 
-You do not need to be technical. Read [START-HERE.md](START-HERE.md) first.
+Really Ran looks at the night jobs on this computer and writes a report a non-tech person can read. Red and yellow first. If you want, it flips the easy switches so tonight has a real chance.
 
-It does **not** change anything until you later choose to. It does not send anything off the PC. It does not store your name or what kind of computer you own.
+Read [START-HERE.md](START-HERE.md) first.
 
-## Install on any Windows 10 or 11 PC
+Used to be called Ready ≠ Ran. Same tool. Easier name.
 
-1. Download the ZIP (green **Code** button → **Download ZIP**).
+## Install (any Windows 10 or 11 computer)
+
+1. Download the ZIP: green **Code** → **Download ZIP**.
 2. Unzip it.
 3. Double-click **Install.cmd**.
 4. If Windows warns you, click **More info** → **Run anyway**.
 
-That puts **Ready Not Ran** on the Desktop and the Start menu for this Windows user only. No administrator password.
+That puts **Really Ran** and **Fix the easy ones** on the Desktop.
 
-## Run it
+You do not need an administrator account to install. Nothing is sent off this computer.
 
-Double-click **Ready Not Ran**.
+## Use it
 
-A report appears in a folder called `out`:
+1. Double-click **Really Ran**.
+2. Click **Scan** (or just let the report open).
+3. Read red and yellow first.
+4. If you want the easy fixes done for you, double-click **Fix the easy ones** and type **YES**.
 
-- **ReadyNotRan.html** — open this
-- **ReadyNotRan.csv** — only if you use Excel
-
-## What the report means
-
-| The report says | In plain English |
-| --- | --- |
-| Disabled | Someone turned this job off. |
-| Never ran | It is on the list but has not run yet. |
-| Failed | Windows started something. The work did not finish. |
-| Missed | The clock time came and went. Nothing caught up. |
-| May skip | It looks healthy. A setting can still skip it. |
-| Looks OK | No obvious trap. Still check that the file you wanted actually showed up. |
-
-## Take it off the PC
-
-Right-click **Uninstall.ps1** → **Run with PowerShell**.
+**Put the old settings back** undoes the last fix.
 
 ## License
 
-Free to use and share. See [LICENSE](LICENSE).
+MIT. See LICENSE.
