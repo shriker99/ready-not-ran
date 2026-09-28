@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ready ≠ Ran — sample report</title>
+<style>
+body { font-family: Segoe UI, sans-serif; margin: 24px; color: #222; background: #faf8f5; }
+h1 { margin-bottom: 8px; }
+.sub { color: #555; margin-bottom: 20px; }
+h2 { margin-top: 28px; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; margin-bottom: 16px; }
+th, td { border: 1px solid #ccc; padding: 8px; text-align: left; vertical-align: top; }
+th { background: #f4f4f4; }
+.note { color: #666; font-size: 13px; margin-bottom: 18px; }
+</style>
+</head>
+<body>
+<h1>Ready ≠ Ran</h1>
+<p class="sub">Sample · 3 Failed · 2 Missed · 4 May skip · 28 checks · This report only looks. It does not change jobs.</p>
+<p class="note">This is a canned example so you can see the report. Job names are fake. It was not taken from anyone’s PC.</p>
+<p><b>This PC:</b> 01 History off · 03 Connected sleep · 05 Laptop defaults</p>
+<h2>All checks</h2>
+<table>
+<thead><tr><th>Check</th><th>What it means</th><th>On this PC</th></tr></thead>
+<tbody>
+<tr style="background:#fff4d6"><td>01 History off</td><td>Task History is off, so failed nights leave no trail.</td><td><b>Found</b></td></tr>
+<tr style="background:#e7f6ec"><td>02 Wake timers blocked</td><td>Windows power settings may refuse to wake the PC.</td><td><b>Clear</b></td></tr>
+<tr style="background:#fff4d6"><td>03 Connected sleep</td><td>Modern Standby can swallow the alarm clock.</td><td><b>Found</b></td></tr>
+<tr style="background:#e7f6ec"><td>04 Scheduler service sick</td><td>If the Task Scheduler service is stopped, every job is theater.</td><td><b>Clear</b></td></tr>
+<tr style="background:#fff4d6"><td>05 Laptop defaults</td><td>This PC has a battery. Night jobs inherit battery-protection defaults.</td><td><b>Found</b></td></tr>
+<tr style="background:#fff4d6"><td>11 Wall power only</td><td>Will not start on battery.</td><td><b>Found (4)</b></td></tr>
+<tr style="background:#fff4d6"><td>15 No catch-up</td><td>A missed slot is gone until the next scheduled time.</td><td><b>Found (3)</b></td></tr>
+</tbody>
+</table>
+<h2>Each job</h2>
+<table>
+<thead>
+<tr><th>Name</th><th>Folder</th><th>Windows status</th><th>Verdict</th><th>Last run</th><th>Next run</th><th>What Windows stored</th><th>Missed</th><th>Problems found</th></tr>
+</thead>
+<tbody>
+<tr style="background:#fde8e8"><td>Night Backup</td><td>\Shop\</td><td>Ready</td><td><b>Failed</b></td><td>2026-09-24 02:00</td><td>2026-09-29 02:00</td><td>Windows refused the run (often battery, sleep, or a condition box)</td><td>3</td><td>09 Missed nights; 11 Wall power only; 15 No catch-up; 28 Windows refused the run</td></tr>
+<tr style="background:#fde8e8"><td>Invoice Export</td><td>\Shop\</td><td>Ready</td><td><b>Failed</b></td><td>2026-09-27 23:15</td><td>2026-09-28 23:15</td><td>Start-in folder does not exist</td><td>0</td><td>18 Bad path or Start-in</td></tr>
+<tr style="background:#fde8e8"><td>QuickBooks Drop</td><td>\Finance\</td><td>Ready</td><td><b>Failed</b></td><td>2026-09-20 01:00</td><td>none</td><td>Saved login is wrong or expired</td><td>1</td><td>16 Stale or limited login; 19 Mapped drive letter</td></tr>
+<tr style="background:#fff4d6"><td>Photo Sync</td><td>\Shop\</td><td>Ready</td><td><b>Missed</b></td><td>2026-09-21 04:00</td><td>2026-09-29 04:00</td><td>Windows says the program finished cleanly</td><td>4</td><td>09 Missed nights; 10 Will not wake PC</td></tr>
+<tr style="background:#fff4d6"><td>Weekly Report</td><td>\Office\</td><td>Ready</td><td><b>Missed</b></td><td>never</td><td>2026-10-04 06:00</td><td>Has not run yet</td><td>2</td><td>07 Never ran; 09 Missed nights</td></tr>
+<tr style="background:#e8f1fb"><td>Temp Cleanup</td><td>\Shop\</td><td>Ready</td><td><b>May skip</b></td><td>2026-09-28 01:10</td><td>2026-09-29 01:10</td><td>Windows says the program finished cleanly</td><td>0</td><td>11 Wall power only; 13 Waits for idle; 15 No catch-up</td></tr>
+<tr style="background:#e8f1fb"><td>Label Print Queue</td><td>\Shop\</td><td>Ready</td><td><b>May skip</b></td><td>2026-09-28 07:00</td><td>2026-09-29 07:00</td><td>Windows says the program finished cleanly</td><td>0</td><td>17 Only while logged on</td></tr>
+<tr style="background:#e7f6ec"><td>Heartbeat</td><td>\Shop\</td><td>Ready</td><td><b>Looks OK</b></td><td>2026-09-28 03:00</td><td>2026-09-28 15:00</td><td>Windows says the program finished cleanly</td><td>0</td><td></td></tr>
+</tbody>
+</table>
+</body>
+</html>
