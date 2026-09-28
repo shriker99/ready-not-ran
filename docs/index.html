@@ -3,28 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ready ≠ Ran — the green check can lie</title>
-  <meta name="description" content="A Windows checker for night jobs that look Ready but never finished. Download, install, scan, and optionally fix the settings that skip the work.">
+  <title>Ready ≠ Ran — did last night’s job actually finish?</title>
+  <meta name="description" content="A simple Windows checker for backups and night jobs that look finished but never ran. For anyone, not just IT." />
   <style>
-    :root { --bg:#14110e; --card:#221d18; --ink:#f4efe6; --mute:#b7aa98; --line:#3a322a; --gold:#e2b15a; --gold2:#c4923a; --ok:#7dcea0; --bad:#e07a7a; }
+    :root { --bg:#14110e; --card:#221d18; --ink:#f4efe6; --mute:#b7aa98; --line:#3a322a; --gold:#e2b15a; --gold2:#c4923a; }
     * { box-sizing:border-box; margin:0; padding:0; }
     body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; background:var(--bg); color:var(--ink); line-height:1.45; }
     .wrap { max-width:880px; margin:0 auto; padding:36px 20px 64px; }
     header { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:40px; }
     .mark { font-weight:700; font-size:22px; letter-spacing:-0.03em; }
     .mark span { color:var(--gold); }
-    h1 { font-size:42px; letter-spacing:-0.04em; line-height:1.1; margin-bottom:14px; }
-    .lede { color:var(--mute); font-size:18px; margin-bottom:28px; max-width:620px; }
+    h1 { font-size:40px; letter-spacing:-0.04em; line-height:1.12; margin-bottom:14px; }
+    .lede { color:var(--mute); font-size:18px; margin-bottom:28px; max-width:640px; }
     .cta { display:inline-block; background:var(--gold); color:#1a1612; font-weight:700; text-decoration:none; padding:14px 20px; border-radius:12px; }
     .cta:hover { background:var(--gold2); }
-    .fine { color:var(--mute); font-size:13px; margin:10px 0 36px; }
+    .fine { color:var(--mute); font-size:14px; margin:10px 0 36px; }
     .grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:36px; }
-    @media (max-width:700px) { .grid { grid-template-columns:1fr; } h1 { font-size:32px; } }
+    @media (max-width:700px) { .grid { grid-template-columns:1fr; } h1 { font-size:30px; } }
     .card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:18px; }
     .n { color:var(--gold); font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:6px; }
     h2 { font-size:22px; margin:8px 0 14px; }
     ul { color:var(--mute); padding-left:18px; }
-    li { margin:6px 0; }
+    li { margin:8px 0; }
     footer { color:var(--mute); font-size:12px; margin-top:28px; }
   </style>
 </head>
@@ -32,33 +32,31 @@
   <div class="wrap">
     <header>
       <div class="mark">Ready <span>≠</span> Ran</div>
-      <div style="color:var(--mute);font-size:13px">Windows 10 / 11</div>
+      <div style="color:var(--mute);font-size:13px">Any Windows 10 or 11 PC</div>
     </header>
-    <h1>Windows says the night job is Ready. That often only means it started.</h1>
-    <p class="lede">Download the pack. Install it for this Windows user. Scan. Then flip the settings that quietly skip backups, exports, and reports &mdash; or leave them alone.</p>
+    <h1>Did last night’s backup actually finish?</h1>
+    <p class="lede">Windows often puts a green check next to night work and says it is Ready. That check can mean “I started,” not “the files are safe.” This tool is for shop owners, home offices, and anyone who is not an IT person.</p>
     <a class="cta" href="https://github.com/shriker99/ready-not-ran/archive/refs/heads/main.zip">Download Ready ≠ Ran</a>
-    <p class="fine">Free ZIP. Unzip &rarr; double-click Install.cmd. No administrator account. Nothing leaves the PC.</p>
+    <p class="fine">Free. Unzip the folder. Double-click Install.cmd. No tech talk required. Nothing leaves your PC.</p>
     <div class="grid">
-      <div class="card"><div class="n">1 · Download</div><p>Get the ZIP. Same file on every PC.</p></div>
-      <div class="card"><div class="n">2 · Install</div><p>Install.cmd copies it into this user’s AppData and puts a shortcut on the Desktop.</p></div>
-      <div class="card"><div class="n">3 · Scan</div><p>The app looks for 28 traps. Red and yellow first.</p></div>
-      <div class="card"><div class="n">4 · Fix if you want</div><p>Tick the settings. Confirm. A backup XML is saved so you can Undo.</p></div>
+      <div class="card"><div class="n">1 · Download</div><p>Get the folder. Same download on every PC.</p></div>
+      <div class="card"><div class="n">2 · Install</div><p>One double-click puts a shortcut on the Desktop.</p></div>
+      <div class="card"><div class="n">3 · Check</div><p>It reads the night to-do list and opens a simple report. Red and yellow first.</p></div>
+      <div class="card"><div class="n">4 · Fix only if you want</div><p>You can leave it at looking. If you fix a setting, it asks first and keeps a spare copy so you can undo.</p></div>
     </div>
-    <h2>What you can change in the app</h2>
+    <h2>What it can tell you, in plain English</h2>
     <div class="card">
       <ul>
-        <li>Allow the job on battery, or keep wall-power only</li>
-        <li>Keep running if the plug is pulled</li>
-        <li>Wake the PC for the night slot</li>
-        <li>Catch up after a missed night</li>
-        <li>Stop waiting for the PC to sit idle</li>
-        <li>Retry after a fail</li>
-        <li>Un-hide a job</li>
-        <li>Include or hide Microsoft’s own jobs</li>
+        <li>The backup never ran because the laptop was on battery</li>
+        <li>The PC was asleep and nobody woke it</li>
+        <li>It only runs while someone is signed in — so nights are skipped</li>
+        <li>Last week’s missed night was never tried again</li>
+        <li>The saved password went stale after you changed the Windows password</li>
+        <li>The file was supposed to land on a drive letter that is not there at night</li>
       </ul>
     </div>
-    <p class="fine" style="margin-top:18px">The app does not change the program a job runs. It does not send a name, email, or PC model anywhere. Open every script in Notepad first if you want.</p>
-    <footer>Ready ≠ Ran · MIT license · Works on any Windows 10 or 11 PC</footer>
+    <p class="fine" style="margin-top:18px">It does not change the program a job runs. It does not need your name. If Windows shows a blue warning, click More info, then Run anyway.</p>
+    <footer>Ready ≠ Ran · Free to share · Made to be understood without an IT department</footer>
   </div>
 </body>
 </html>

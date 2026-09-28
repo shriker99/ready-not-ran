@@ -1,69 +1,47 @@
 # Ready ≠ Ran
 
 Windows will put a green check next to a night job and say it is **Ready**.
-That check often only means “I started the program.” It does not mean the backup, export, or report actually finished.
+That often only means “I started.” It does not mean the backup, export, or report actually finished.
 
-This checker looks for **28 real traps** most owners never hear about. It writes a report you can open in a browser.
+This tool looks for the usual quiet reasons that happens. Then it writes a page you can open in any browser.
 
-It does **not** change any jobs. It only looks.
+You do not need to be technical. Read [START-HERE.md](START-HERE.md) first.
 
-It has no built-in owner name, no home address, and no specific PC model. It reads the Windows PC you install it on.
+It does **not** change anything until you later choose to. It does not send anything off the PC. It does not store your name or what kind of computer you own.
 
-The list of traps is in [PROBLEMS.md](PROBLEMS.md).
+## Install on any Windows 10 or 11 PC
 
-## Install (any Windows 10 or 11 PC)
-
-1. Download the ZIP from this page: green **Code** → **Download ZIP**.
+1. Download the ZIP (green **Code** button → **Download ZIP**).
 2. Unzip it.
 3. Double-click **Install.cmd**.
-4. If Windows warns you, choose **More info** → **Run anyway**, or right-click **Install.ps1** → **Run with PowerShell**.
+4. If Windows warns you, click **More info** → **Run anyway**.
 
-That copies the checker into this user’s AppData folder and puts **Ready Not Ran** on the Start Menu and Desktop.
-
-No administrator account is required. Nothing is sent off the PC.
+That puts **Ready Not Ran** on the Desktop and the Start menu for this Windows user only. No administrator password.
 
 ## Run it
 
 Double-click **Ready Not Ran**.
 
-Or, from the unzipped folder without installing:
+A report appears in a folder called `out`:
 
-```powershell
-Set-ExecutionPolicy -Scope Process Bypass
-.\ReadyNotRan.ps1
-```
-
-The report lands in an `out` folder next to the script:
-
-- `ReadyNotRan.html` — open this
-- `ReadyNotRan.csv` — for Excel
-
-Run it as Administrator only if you want to see jobs created by other accounts, not just yours.
-
-## Remove it
-
-Right-click `Uninstall.ps1` in the install folder → **Run with PowerShell**, or run `Uninstall.ps1` from the original ZIP.
+- **ReadyNotRan.html** — open this
+- **ReadyNotRan.csv** — only if you use Excel
 
 ## What the report means
 
-| Verdict | Plain meaning |
+| The report says | In plain English |
 | --- | --- |
-| Disabled | The job is turned off. |
+| Disabled | Someone turned this job off. |
 | Never ran | It is on the list but has not run yet. |
-| Failed | Windows started something. The work itself failed or was refused. |
-| Missed | The clock time passed and the job did not catch up. |
-| May skip | The job looks healthy, but a setting can quietly skip it. |
-| Looks OK | No obvious trap. Still confirm the file you expected actually showed up. |
+| Failed | Windows started something. The work did not finish. |
+| Missed | The clock time came and went. Nothing caught up. |
+| May skip | It looks healthy. A setting can still skip it. |
+| Looks OK | No obvious trap. Still check that the file you wanted actually showed up. |
 
-A result of **0** only means the program said “I exited cleanly.” Your script can still have written nothing.
+## Take it off the PC
 
-## What this is not
-
-- Not a monitoring service.
-- Not a fix button. See [FIXES.md](FIXES.md).
-- Not connected to the internet. The script stays on the PC that runs it.
-- Not tied to one brand of computer.
+Right-click **Uninstall.ps1** → **Run with PowerShell**.
 
 ## License
 
-MIT. Free to use and share. See [LICENSE](LICENSE).
+Free to use and share. See [LICENSE](LICENSE).

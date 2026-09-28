@@ -1,33 +1,27 @@
-# Apply and Undo
+# Fix and Undo
 
-Scan is the default. Nothing is written until you press **Apply selected** and confirm.
+The checker only looks. Nothing changes until you press **Fix the ones I picked** and say yes.
 
-## What Apply may change
+## What a fix may change
 
-Only these settings on a job you selected:
+Only the quiet settings that skip night work:
 
-- Start on battery
-- Do not stop if unplugged
-- Wake the PC
-- Catch up after a missed start
-- Do not wait for idle
-- Do not stop when idle ends
-- Do not require a specific network
-- Un-hide the job
-- Restart up to 3 times after a fail
-- Queue a second copy instead of ignoring it
+- Run even if the laptop is unplugged
+- Keep going if you pull the plug mid-job
+- Wake the PC at the scheduled hour
+- Try again after a missed night
+- Do not wait until nobody is using the PC
+- Do not need a special office network
+- Show a hidden job again
+- Try again a few times if it fails
 
-## What Apply will not change
+## What a fix will not change
 
-- The program or script the job runs
-- The account the job runs as
+- The program the job runs
+- The sign-in it uses
 - The password
-- Jobs under `\Microsoft\` unless you turned on **Include Microsoft jobs** and selected that row
+- Windows’ own built-in jobs, unless you turn that option on on purpose
 
-## Backup
+## Spare copy
 
-Before a write, the current job is saved as XML in:
-
-`%LOCALAPPDATA%\ReadyNotRan\backups\<date-time>\`
-
-**Undo last apply** puts those XML files back.
+Before a change, the old job is saved on this PC. **Put the old settings back** uses that spare copy.

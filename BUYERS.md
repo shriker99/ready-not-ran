@@ -1,10 +1,10 @@
-# What to tell the person who owns the PC
+# Hand this to whoever owns the PC
 
-Hand them this page with the HTML report.
+You do not have to fix it yourself. Give them the report and this page.
 
-1. Yellow and red rows first. Ignore the green ones until those are clear.
-2. If a row says **May skip**, the job looks healthy but a laptop setting can quietly skip it. Common ones: only on power, only when idle, will not wake from sleep.
-3. If a row says **Failed**, Windows started something and the work did not finish. Open that job in Task Scheduler and look at the last result.
-4. If a row says **Never ran**, it is on the list but has not fired. Check the clock time and whether the PC is off at that hour.
-5. A last result of 0 only means the program said it exited cleanly. Confirm the file you expected actually showed up.
-6. This tool does not flip the switches. Change the job in Task Scheduler, or ask IT to. The usual fixes are in FIXES.md.
+1. Look at red and yellow rows first. Leave the green ones for later.
+2. **Failed** means Windows started something and the work did not finish. Ask: did the backup file actually show up?
+3. **Missed** or **Never ran** means the clock time came and went. Ask: is the PC off or asleep at that hour?
+4. **May skip** means it looks healthy but a setting can quietly skip it — battery, sleep, or “only while someone is signed in.”
+5. A note that says Windows finished cleanly only means the program closed. Check the folder where the file should be.
+6. This tool does not flip switches by itself. The usual repairs are in FIXES.md, written as click-this-then-that.
