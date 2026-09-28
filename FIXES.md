@@ -1,65 +1,51 @@
-# Common traps (plain English)
+# Everyday fixes
 
-Match the row in the report to the fix. The checker does not flip these switches.
+Match the words in the report to the steps below. You can also leave the jobs alone and only use the report.
 
-## History is off
+To open the Windows night-job list: click Start, type **Task Scheduler**, open it.
 
-Task Scheduler → click **Task Scheduler Library** → **Enable All Tasks History** on the right.
+Find the job name from the report. Double-click that name.
 
-## Wake timers are off
+## The computer was asleep
 
-Power Options → Change plan settings → Change advanced power settings → Sleep → Allow wake timers → Enable for plugged in (and battery if you mean it).
+Open **Conditions**.
 
-## Connected sleep
+Turn on **Wake the computer to run this task**.
 
-On many laptops the PC is never fully asleep and never fully awake. If night jobs must run, set the job to wake the PC **and** enable wake timers. If they still miss, run them at logon as a backup.
+Then open **Settings** and turn on **Run task as soon as possible after a scheduled start is missed**.
 
-## Wall power / unplug
+## It only runs when the charger is in
 
-Conditions tab: uncheck **Start only if on AC power** and **Stop if the computer switches to battery** unless you really want that.
+**Conditions** tab. Turn off **Start the task only if the computer is on AC power** unless you really want that.
 
-## Idle
+Turn off **Stop if the computer switches to battery power** if a long backup should keep going.
 
-Uncheck **Start only if the computer is idle**. Uncheck stop-if-no-longer-idle for backups.
+## It waits until nobody is using the PC
 
-## No catch-up
+**Conditions** tab. Turn off **Start only if the computer is idle**.
 
-Settings tab: check **Run task as soon as possible after a scheduled start is missed**.
+If a backup dies when you touch the mouse, also turn off the option that stops the job when the PC is no longer idle.
 
-## Will not wake
+## The Windows password changed
 
-Conditions tab: check **Wake the computer to run this task**.
+**General** tab. Choose **Run whether user is logged on or not**. Type the current password. Save.
 
-## Saved login / only while logged on
+Do that again after every password change.
 
-General tab: pick **Run whether user is logged on or not**, enter the current password, save. After any Windows password change, do that again.
+## It only runs while someone is signed in
 
-## Blank Start-in or quotes
+Same **General** tab. Night jobs usually need **Run whether user is logged on or not**.
 
-Set **Start in** to the script folder. No quotation marks. Inside the script use full paths.
+## There is no trail when something fails
 
-## Mapped drives
+In the left list, click the top item **Task Scheduler Library**. On the right, click **Enable All Tasks History**.
 
-Replace `H:\folder\file` with `\\server\share\file`.
+## The file path looks wrong, or it used a drive letter like H:
 
-## PowerShell -Command
+Open **Actions**. Use a full path such as `C:\Backups\run.bat`.
 
-Use:
+Do not use `H:` or `Z:` for night work. Those letters often vanish when nobody is signed in.
 
-`powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File C:\Jobs\Backup.ps1`
+## This tool will not flip those switches unless you ask it to
 
-## Time cap / no retry / second copy ignored
-
-Settings tab: raise the time limit, set restart-on-failure, and pick Queue or run in parallel if two nights can overlap.
-
-## Trigger end date / trigger off
-
-Open Triggers. Turn the trigger on. Clear an old end date.
-
-## Maintenance only
-
-If the job is tied to Automatic Maintenance, it waits for Windows. Give it its own daily clock time instead.
-
-## Stuck Running
-
-End the task, then fix the script so it can exit. Check it is not waiting for a window.
+The report only looks. If you use the optional fixer, it asks first and keeps a spare copy. See APPLY.md.
