@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="640" viewBox="0 0 1120 640">
+<rect width="1120" height="640" fill="#14110e"/>
+<rect width="1120" height="58" fill="#221d18"/>
+<text x="20" y="36" fill="#e2b15a" font-family="Segoe UI, Arial" font-size="22" font-weight="700">Ready ≠ Ran</text>
+<text x="210" y="36" fill="#b7aa98" font-family="Segoe UI, Arial" font-size="14">Scan first. Change only what you tick.</text>
+<rect x="16" y="74" width="150" height="34" rx="8" fill="#e2b15a"/>
+<text x="91" y="96" text-anchor="middle" fill="#1a1612" font-family="Segoe UI, Arial" font-size="14" font-weight="700">Scan this PC</text>
+<rect x="176" y="74" width="150" height="34" rx="8" fill="#e2b15a"/>
+<text x="251" y="96" text-anchor="middle" fill="#1a1612" font-family="Segoe UI, Arial" font-size="14" font-weight="700">Apply selected</text>
+<rect x="336" y="74" width="160" height="34" rx="8" fill="#e2b15a"/>
+<text x="416" y="96" text-anchor="middle" fill="#1a1612" font-family="Segoe UI, Arial" font-size="14" font-weight="700">Undo last apply</text>
+<text x="520" y="96" fill="#f4efe6" font-family="Segoe UI, Arial" font-size="14">Include Microsoft jobs</text>
+<text x="20" y="150" fill="#b7aa98" font-family="Segoe UI, Arial" font-size="13">Scanning this Windows PC…</text>
+<text x="20" y="190" fill="#f4efe6" font-family="Segoe UI, Arial" font-size="16">28 checks · 8 jobs found · problems first</text>
+<text x="20" y="250" fill="#e07a7a" font-family="Segoe UI, Arial" font-size="15">Night Backup — Failed — saved login expired</text>
+<text x="20" y="286" fill="#e2b15a" font-family="Segoe UI, Arial" font-size="15">Invoice Export — Missed — will not wake PC</text>
+<text x="20" y="322" fill="#e2b15a" font-family="Segoe UI, Arial" font-size="15">Photo Sync — Missed — 4 missed nights</text>
+<text x="20" y="358" fill="#9ec4e0" font-family="Segoe UI, Arial" font-size="15">Temp Cleanup — May skip — waits for idle</text>
+<text x="20" y="394" fill="#7dcea0" font-family="Segoe UI, Arial" font-size="15">Heartbeat — Looks OK</text>
+<text x="20" y="470" fill="#b7aa98" font-family="Segoe UI, Arial" font-size="13">Sample jobs. Not copied from a real household PC.</text>
+</svg>
