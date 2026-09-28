@@ -1,44 +1,45 @@
-# Paid listing copy (paste into Gumroad or Lemon)
+# Gumroad paste
 
-This file is for the store page. The GitHub repo stays free.
+Use this on the product page. Do not invent a checkout link until Gumroad gives you one.
 
-## Fields
+## Product name
 
-- **Name:** Ready ≠ Ran
-- **Price:** $29 USD
-- **Type:** Digital download
-- **File:** ZIP of this repo (ReadyNotRan.ps1 + README + FIXES + SECURITY + LICENSE)
-- **Support:** none. No tickets. The guide is in the ZIP.
+Ready ≠ Ran — Windows night-job checker
 
-## Short pitch
+## Price
 
-Windows can put a green check next to a night job and still have done no work. Ready ≠ Ran reads those jobs and writes a plain-English report: which ones failed, never ran, missed a night, or are set to quietly skip.
+$29 USD
+
+Turn on “Pay what you want” if Gumroad offers it. Floor $29.
+
+## Short summary
+
+Windows says the night job is Ready. That often only means it started. This checker tells you which jobs only look finished.
 
 ## Description (paste)
 
-Ready ≠ Ran is a small Windows checker for night jobs.
+Your PC has a night to-do list. Backups. Reports. File exports. Windows puts a green check next to those jobs.
 
-Backups, exports, and reports often sit on Task Scheduler. The screen can say Ready even when:
+That check often only means “I started the program.” It does not mean the work finished. A laptop can be asleep. A setting can skip the job on battery. A script can fail and still leave a clean-looking result.
 
-- the laptop was asleep
-- the job is set to run only on power
-- the job waits until the PC is idle
-- the program started and then did nothing useful
+Ready ≠ Ran is a small Windows checker. You unzip it, run one script, and get a report you can open in a browser. Red and yellow rows first.
 
-This download looks at those jobs and writes a report you open in a browser. It does not change any job.
+It does not change any jobs. It only looks.
 
-You get:
-
+Included:
 - ReadyNotRan.ps1 — the checker
-- FIXES.md — the usual traps, in plain English
-- A report folder (`out`) with HTML and CSV after you run it
+- FIXES.md — the usual traps in plain English
+- A short report you can hand to whoever owns the PC
 
-Needs Windows 10 or 11. Run it on the same PC that is supposed to do the night work.
+The same checker is also free on GitHub. Pay here if you want the pack in one download and to fund the next version (a simple email alert).
 
-How to run: unzip → right-click ReadyNotRan.ps1 → Run with PowerShell.
+Needs Windows 10 or 11. Not a phone app. No support inbox — the guide is in the zip.
 
-No support inbox. If the report is unclear, read FIXES.md.
+## After they pay
 
-## After you publish
+Gumroad emails the zip. That is the whole delivery.
 
-Reply in the desk thread with the live product URL. Then the Buy link can be added to the README.
+## Cover / thumbnail text
+
+Ready ≠ Ran
+The green check can lie.
